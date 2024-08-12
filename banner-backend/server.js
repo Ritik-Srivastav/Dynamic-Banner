@@ -49,10 +49,10 @@ app.post('/api/banner', (req, res) => {
 });
 
 //static files
-app.use(express.static(path.join(__dirname,'./banner-frontend/build')));
+app.use(express.static(path.join(__dirname,'../banner-frontend/build')));
 
 app.get('*',function(req,res){
-  res.sendFile(path.join(__dirname, "./banner-frontend/build/index.html"));
+  res.sendFile(path.join(__dirname, "../banner-frontend/build/index.html"));
 });
 
 app.listen(port, () => {
